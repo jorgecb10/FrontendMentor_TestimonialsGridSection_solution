@@ -1,0 +1,178 @@
+:root {
+    --primario : hsl(263, 55%, 52%);
+    --primario2 : hsl(263, 100%, 72%);
+    --azulGris : hsl(217, 19%, 35%);
+    --azulNegro : hsl(219, 29%, 14%);
+    --blanco : hsl(0, 0%, 100%);
+    --blanco2 : hsla(0, 0%, 100%, 0.5);
+    --blanco3 : hsla(0, 0%, 100%, 0.7);
+    --grisClaro : hsl(0, 0%, 81%);
+    --gris : hsl(0, 0%, 58%);
+    --azulGrisClaro : hsl(210, 46%, 95%);
+
+    --fuente : 'Barlow Semi Condensed', san-serif;
+
+    --fontSize : 1.6rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+body {
+    background-color: var(--azulGrisClaro);
+    font-size: var(--fontSize);
+    font-family: var(--fuente);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* globales */
+.contenedor {
+    max-width: 160rem;
+    width: 90%;
+    margin-top: 6rem;
+}
+h2 {
+    line-height: 1.2;
+    font-size: 2.4rem;
+    margin: 2rem 0;
+}
+h3 {
+    margin: 0 0 1.5rem 0;
+}
+.texto p {
+    font-weight: 600;
+}
+.cuadro p {
+    margin: 0;
+}
+img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* utilidades */
+.blancoGris {
+    color: var(--blanco2);
+}
+.blancoGrisFuerte {
+    color: var(--blanco3);
+}
+.blanco {
+    color: var(--blanco);
+}
+.azulGris {
+    color: var(--azulGris)
+}
+.gris {
+    color: var(--gris);
+}
+.azulGrisClaro {
+    color: var(--azulGrisClaro);
+}
+.borde {
+    border: .2rem solid var(--primario2);
+}
+
+/* contenido */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+@media (min-width: 1440px) {
+    .contenido {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 3rem;
+    }
+}
+
+/* cuadro */
+.cuadro {
+    padding: 3rem 3.5rem;
+    border-radius: 1.5rem;
+}
+
+/* icono */
+.icono {
+    display: flex;
+    align-items: center;
+}
+.icono .texto {
+    line-height: .2;
+    margin-left: 2rem;
+}
+.icono img {
+    width: 4rem;
+    border-radius: 50%;
+}
+
+/* cuadro daniel */
+.cuadro.daniel {
+    background: var(--primario) url('/images/bg-pattern-quotation.svg') no-repeat 90% 0%;
+}
+@media (min-width: 1440px) {
+    .cuadro.daniel {
+        grid-column: 1 / 3;
+    }
+}
+
+/* cuadro jonathan */
+.cuadro.jonathan {
+    background-color: var(--azulGris);
+}
+
+/* cuadro jeanette */
+.cuadro.jeanette {
+    background-color: var(--blanco);
+    box-shadow: 32px 49px 57px -46px rgba(0,0,0,0.59);
+}
+@media (min-width: 1440px) {
+    .cuadro.jeanette {
+        grid-row: 2 / 3;
+    }
+}
+
+/* cuadro patrick */
+.cuadro.patrick {
+    background-color: var(--azulNegro);
+}
+@media (min-width: 1440px) {
+    .cuadro.patrick {
+        grid-column: 2 / 4;
+    }
+}
+
+/* cuadro kira */
+.cuadro.kira {
+    background-color: var(--blanco);
+    box-shadow: 32px 49px 57px -46px rgba(0,0,0,0.59);
+}
+@media (min-width: 1440px) {
+    .cuadro.kira {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+}
+
+/* attribution */
+.attribution {
+    margin: 2.5rem 0;
+}
+.attribution a {
+    text-decoration: none;
+    color: var(--primario);
+}
